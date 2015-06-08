@@ -62,7 +62,7 @@
                        zoomLevel:15 animated:NO];
     [self.mapBoxView addSubview:self.mapView];
     
-    /* Map Styles -- Emerald, Light, Dark, Mapbox Streets
+    /* Map Styles available  -- Emerald, Light, Dark, Mapbox Streets
      static NSArray *const kStyleNames = @[
      @"Mapbox Streets",
      @"Emerald",
