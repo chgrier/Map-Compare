@@ -8,7 +8,7 @@ In order for the app to work, you must install Mapbox GL to the project.  To ins
 
 Also, you must enter your Mapbox Access Token from your Mapbox account page (see the warning directive in ViewController.m).  
 
-To learn more abou the app, see my post: http://charlesgrier.com/getting-started-with-mapbox-gl-for-ios/
+To learn more abou the app, see my post: http://charlesgrier.com/mapboxgl/
 
 ###### Screenshots:
 
