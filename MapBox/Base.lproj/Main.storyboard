@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QsB-X1-eXN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map Compare-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,77 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-x9-1b1">
+                                <rect key="frame" x="16" y="72" width="568" height="225"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGt-0R-e87">
+                                <rect key="frame" x="16" y="305" width="568" height="225"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zIp-Q7-ZHk">
+                                <rect key="frame" x="151" y="550" width="292" height="29"/>
+                                <segments>
+                                    <segment title="Streets"/>
+                                    <segment title="Emerald"/>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeMapStyle:" destination="BYZ-38-t0r" eventType="valueChanged" id="gNQ-aY-1s8"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yGt-0R-e87" firstAttribute="centerX" secondItem="zIp-Q7-ZHk" secondAttribute="centerX" constant="3" id="7g4-qR-zN1"/>
+                            <constraint firstItem="yGt-0R-e87" firstAttribute="top" secondItem="5YO-x9-1b1" secondAttribute="bottom" constant="8" symbolic="YES" id="MCs-oy-PDk"/>
+                            <constraint firstItem="zIp-Q7-ZHk" firstAttribute="top" secondItem="yGt-0R-e87" secondAttribute="bottom" constant="20" id="N10-5l-vaF"/>
+                            <constraint firstItem="5YO-x9-1b1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="NBp-0L-EpV"/>
+                            <constraint firstItem="5YO-x9-1b1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XEx-5H-X9J"/>
+                            <constraint firstItem="yGt-0R-e87" firstAttribute="width" secondItem="5YO-x9-1b1" secondAttribute="width" id="bFb-oP-i8n"/>
+                            <constraint firstItem="yGt-0R-e87" firstAttribute="height" secondItem="5YO-x9-1b1" secondAttribute="height" id="dRM-hS-ucq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yGt-0R-e87" secondAttribute="bottom" constant="70" id="lDc-K5-xHe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yGt-0R-e87" secondAttribute="trailing" id="oFu-G4-dex"/>
+                            <constraint firstItem="yGt-0R-e87" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yUM-tE-dOI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Map Compare" id="cm7-JZ-O1Q">
+                        <barButtonItem key="leftBarButtonItem" image="Location" id="zPa-6Z-s47">
+                            <connections>
+                                <action selector="setMapOnUserLocation:" destination="BYZ-38-t0r" id="Qca-nK-wWV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapBoxView" destination="yGt-0R-e87" id="iBx-EU-Fgr"/>
+                        <outlet property="mapViewNative" destination="5YO-x9-1b1" id="vZL-Wh-Cmz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1126" y="-357"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OsT-ZA-xZ0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QsB-X1-eXN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9tq-MG-VXn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="U8E-al-zU9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJr-Qc-QKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405" y="-357"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Location" width="25" height="25"/>
+    </resources>
 </document>
