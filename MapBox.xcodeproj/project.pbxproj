@@ -33,7 +33,7 @@
 /* Begin PBXFileReference section */
 		02CD9FCF2E933B3FCF2134CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		794AF8E32F8A662F6AA2C522 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		BE8684041B1E6BAD00A02592 /* MapCompare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapCompare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE8684041B1E6BAD00A02592 /* MapBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE8684081B1E6BAD00A02592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE8684091B1E6BAD00A02592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE86840B1B1E6BAD00A02592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		BE8684121B1E6BAD00A02592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE8684141B1E6BAD00A02592 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BE8684171B1E6BAD00A02592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		BE86841D1B1E6BAD00A02592 /* MapCompareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapCompareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE86841D1B1E6BAD00A02592 /* MapBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE8684221B1E6BAD00A02592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE8684231B1E6BAD00A02592 /* MapBoxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapBoxTests.m; sourceTree = "<group>"; };
 		BE86842D1B1F5C3100A02592 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 		BE8684051B1E6BAD00A02592 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE8684041B1E6BAD00A02592 /* MapCompare.app */,
-				BE86841D1B1E6BAD00A02592 /* MapCompareTests.xctest */,
+				BE8684041B1E6BAD00A02592 /* MapBox.app */,
+				BE86841D1B1E6BAD00A02592 /* MapBoxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE8684031B1E6BAD00A02592 /* MapCompare */ = {
+		BE8684031B1E6BAD00A02592 /* MapBox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE8684271B1E6BAD00A02592 /* Build configuration list for PBXNativeTarget "MapCompare" */;
+			buildConfigurationList = BE8684271B1E6BAD00A02592 /* Build configuration list for PBXNativeTarget "MapBox" */;
 			buildPhases = (
 				E115537EB063C2510CD3A83C /* Check Pods Manifest.lock */,
 				BE8684001B1E6BAD00A02592 /* Sources */,
@@ -173,14 +173,14 @@
 			);
 			dependencies = (
 			);
-			name = MapCompare;
+			name = MapBox;
 			productName = MapBox;
-			productReference = BE8684041B1E6BAD00A02592 /* MapCompare.app */;
+			productReference = BE8684041B1E6BAD00A02592 /* MapBox.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BE86841C1B1E6BAD00A02592 /* MapCompareTests */ = {
+		BE86841C1B1E6BAD00A02592 /* MapBoxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE86842A1B1E6BAD00A02592 /* Build configuration list for PBXNativeTarget "MapCompareTests" */;
+			buildConfigurationList = BE86842A1B1E6BAD00A02592 /* Build configuration list for PBXNativeTarget "MapBoxTests" */;
 			buildPhases = (
 				BE8684191B1E6BAD00A02592 /* Sources */,
 				BE86841A1B1E6BAD00A02592 /* Frameworks */,
@@ -191,9 +191,9 @@
 			dependencies = (
 				BE86841F1B1E6BAD00A02592 /* PBXTargetDependency */,
 			);
-			name = MapCompareTests;
+			name = MapBoxTests;
 			productName = MapBoxTests;
-			productReference = BE86841D1B1E6BAD00A02592 /* MapCompareTests.xctest */;
+			productReference = BE86841D1B1E6BAD00A02592 /* MapBoxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -219,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BE8683FF1B1E6BAD00A02592 /* Build configuration list for PBXProject "MapCompare" */;
+			buildConfigurationList = BE8683FF1B1E6BAD00A02592 /* Build configuration list for PBXProject "MapBox" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,8 +232,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE8684031B1E6BAD00A02592 /* MapCompare */,
-				BE86841C1B1E6BAD00A02592 /* MapCompareTests */,
+				BE8684031B1E6BAD00A02592 /* MapBox */,
+				BE86841C1B1E6BAD00A02592 /* MapBoxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -332,7 +332,7 @@
 /* Begin PBXTargetDependency section */
 		BE86841F1B1E6BAD00A02592 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE8684031B1E6BAD00A02592 /* MapCompare */;
+			target = BE8684031B1E6BAD00A02592 /* MapBox */;
 			targetProxy = BE86841E1B1E6BAD00A02592 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -446,7 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MapBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = MapCompare;
+				PRODUCT_NAME = MapBox;
 			};
 			name = Debug;
 		};
@@ -457,7 +457,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MapBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = MapCompare;
+				PRODUCT_NAME = MapBox;
 			};
 			name = Release;
 		};
@@ -475,7 +475,7 @@
 				);
 				INFOPLIST_FILE = MapBoxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = MapCompareTests;
+				PRODUCT_NAME = MapBoxTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapBox.app/MapBox";
 			};
 			name = Debug;
@@ -490,7 +490,7 @@
 				);
 				INFOPLIST_FILE = MapBoxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = MapCompareTests;
+				PRODUCT_NAME = MapBoxTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapBox.app/MapBox";
 			};
 			name = Release;
@@ -498,7 +498,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE8683FF1B1E6BAD00A02592 /* Build configuration list for PBXProject "MapCompare" */ = {
+		BE8683FF1B1E6BAD00A02592 /* Build configuration list for PBXProject "MapBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE8684251B1E6BAD00A02592 /* Debug */,
@@ -507,7 +507,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE8684271B1E6BAD00A02592 /* Build configuration list for PBXNativeTarget "MapCompare" */ = {
+		BE8684271B1E6BAD00A02592 /* Build configuration list for PBXNativeTarget "MapBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE8684281B1E6BAD00A02592 /* Debug */,
@@ -516,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE86842A1B1E6BAD00A02592 /* Build configuration list for PBXNativeTarget "MapCompareTests" */ = {
+		BE86842A1B1E6BAD00A02592 /* Build configuration list for PBXNativeTarget "MapBoxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE86842B1B1E6BAD00A02592 /* Debug */,
