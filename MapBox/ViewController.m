@@ -49,7 +49,7 @@
 #warning -- Enter your Mapbox Access Token
     // Initialize MapBox view with specific styleURL
 
-    NSString *accessToken = @"";
+    NSString *accessToken = @"pk.eyJ1IjoiY2hncmllciIsImEiOiIzMzVNM3QwIn0.3qsUNpmeM_mCOgNtSfooOQ";
     MGLMapView *mapView = [[MGLMapView alloc] initWithFrame:self.mapBoxView.bounds
                                                 accessToken:accessToken
                                                    styleURL:[NSURL URLWithString:@"asset://styles/mapbox streets-v7.json"]];
@@ -97,11 +97,11 @@
     
     // Initialize and add gesture recognizer to center maps on new location after long press
     UILongPressGestureRecognizer *longPressRecognizer = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPress:)];
-    longPressRecognizer.minimumPressDuration = 1.0;
+    longPressRecognizer.minimumPressDuration = 0.5;
     [self.mapViewNative addGestureRecognizer:longPressRecognizer];
 
     UILongPressGestureRecognizer *longPressRecognizerMapBox = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressMapBox:)];
-    longPressRecognizer.minimumPressDuration = 1.0;
+    longPressRecognizer.minimumPressDuration = 0.5;
     [self.mapView addGestureRecognizer:longPressRecognizerMapBox];
     
     //self.navigationItem.leftBarButtonItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapViewNative];
