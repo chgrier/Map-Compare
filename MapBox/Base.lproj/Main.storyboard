@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QsB-X1-eXN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QsB-X1-eXN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,39 +18,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-x9-1b1">
-                                <rect key="frame" x="16" y="72" width="568" height="225"/>
-                            </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGt-0R-e87">
-                                <rect key="frame" x="16" y="305" width="568" height="225"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                            </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zIp-Q7-ZHk">
-                                <rect key="frame" x="151" y="550" width="292" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zIp-Q7-ZHk">
+                                <rect key="frame" x="171" y="550" width="259" height="29"/>
+                                <animations/>
                                 <segments>
                                     <segment title="Streets"/>
                                     <segment title="Emerald"/>
                                     <segment title="Light"/>
                                     <segment title="Dark"/>
                                 </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="70" y="541" width="259" height="29"/>
+                                </variation>
                                 <connections>
                                     <action selector="changeMapStyle:" destination="BYZ-38-t0r" eventType="valueChanged" id="gNQ-aY-1s8"/>
                                 </connections>
                             </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d25-A2-qh6">
+                                <rect key="frame" x="20" y="72" width="560" height="220"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="NUk-lk-adL"/>
+                                    <constraint firstAttribute="height" constant="220" id="bAR-rP-1r6"/>
+                                    <constraint firstAttribute="height" constant="220" id="djg-Re-IXE"/>
+                                    <constraint firstAttribute="width" constant="560" id="ile-V7-kOG"/>
+                                    <constraint firstAttribute="height" constant="220" id="rLi-ga-3Vu"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NUk-lk-adL"/>
+                                        <exclude reference="bAR-rP-1r6"/>
+                                        <exclude reference="djg-Re-IXE"/>
+                                        <exclude reference="ile-V7-kOG"/>
+                                        <exclude reference="rLi-ga-3Vu"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="yLA-tp-7f8" customClass="MGLMapView">
+                                <rect key="frame" x="20" y="300" width="560" height="220"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="91t-w9-fK5"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="91t-w9-fK5"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yGt-0R-e87" firstAttribute="centerX" secondItem="zIp-Q7-ZHk" secondAttribute="centerX" constant="3" id="7g4-qR-zN1"/>
-                            <constraint firstItem="yGt-0R-e87" firstAttribute="top" secondItem="5YO-x9-1b1" secondAttribute="bottom" constant="8" symbolic="YES" id="MCs-oy-PDk"/>
-                            <constraint firstItem="zIp-Q7-ZHk" firstAttribute="top" secondItem="yGt-0R-e87" secondAttribute="bottom" constant="20" id="N10-5l-vaF"/>
-                            <constraint firstItem="5YO-x9-1b1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="NBp-0L-EpV"/>
-                            <constraint firstItem="5YO-x9-1b1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XEx-5H-X9J"/>
-                            <constraint firstItem="yGt-0R-e87" firstAttribute="width" secondItem="5YO-x9-1b1" secondAttribute="width" id="bFb-oP-i8n"/>
-                            <constraint firstItem="yGt-0R-e87" firstAttribute="height" secondItem="5YO-x9-1b1" secondAttribute="height" id="dRM-hS-ucq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yGt-0R-e87" secondAttribute="bottom" constant="70" id="lDc-K5-xHe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yGt-0R-e87" secondAttribute="trailing" id="oFu-G4-dex"/>
-                            <constraint firstItem="yGt-0R-e87" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yUM-tE-dOI"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="width" secondItem="d25-A2-qh6" secondAttribute="width" id="3yu-w3-1T6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yLA-tp-7f8" secondAttribute="leading" id="7ze-2D-dgK"/>
+                            <constraint firstItem="d25-A2-qh6" firstAttribute="height" secondItem="yLA-tp-7f8" secondAttribute="height" id="Dhc-Cx-PY8"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="EC9-vn-nP0"/>
+                            <constraint firstItem="zIp-Q7-ZHk" firstAttribute="top" secondItem="yLA-tp-7f8" secondAttribute="bottom" constant="30" id="H9U-r8-mhF"/>
+                            <constraint firstItem="d25-A2-qh6" firstAttribute="centerX" secondItem="zIp-Q7-ZHk" secondAttribute="centerX" id="HQr-aF-rmB"/>
+                            <constraint firstAttribute="bottom" secondItem="yLA-tp-7f8" secondAttribute="bottom" constant="80" id="K9o-Vs-zzN"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="trailing" secondItem="d25-A2-qh6" secondAttribute="trailing" id="LZT-Nm-E7s"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="height" secondItem="d25-A2-qh6" secondAttribute="height" id="O88-SN-ouc"/>
+                            <constraint firstAttribute="trailing" secondItem="d25-A2-qh6" secondAttribute="trailing" constant="20" id="Tfl-6L-BuZ"/>
+                            <constraint firstAttribute="bottom" secondItem="yLA-tp-7f8" secondAttribute="bottom" constant="80" id="U4z-3E-GVY"/>
+                            <constraint firstItem="d25-A2-qh6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WRq-7z-6oZ"/>
+                            <constraint firstItem="d25-A2-qh6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XbV-7r-e7N"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="top" secondItem="d25-A2-qh6" secondAttribute="bottom" constant="8" id="ZfR-GI-xqe"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="top" secondItem="d25-A2-qh6" secondAttribute="bottom" constant="8" id="bjt-mx-u6c"/>
+                            <constraint firstAttribute="trailing" secondItem="yLA-tp-7f8" secondAttribute="trailing" constant="20" id="bwN-VJ-jIV"/>
+                            <constraint firstItem="zIp-Q7-ZHk" firstAttribute="top" secondItem="yLA-tp-7f8" secondAttribute="bottom" constant="30" id="bxu-hO-R5o"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="top" secondItem="d25-A2-qh6" secondAttribute="bottom" constant="8" id="c4b-KT-fwO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zIp-Q7-ZHk" secondAttribute="bottom" constant="22" id="c6J-Ye-dXs"/>
+                            <constraint firstItem="zIp-Q7-ZHk" firstAttribute="top" secondItem="yLA-tp-7f8" secondAttribute="bottom" constant="8" symbolic="YES" id="c8J-wl-Jvy"/>
+                            <constraint firstItem="d25-A2-qh6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="it1-hM-NVZ"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="centerX" secondItem="zIp-Q7-ZHk" secondAttribute="centerX" id="nSp-LT-EFB"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="width" secondItem="d25-A2-qh6" secondAttribute="width" id="q7J-5w-cfL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yLA-tp-7f8" secondAttribute="trailing" id="uCD-ZD-zAc"/>
+                            <constraint firstItem="d25-A2-qh6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="wci-VZ-mrw"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="leading" secondItem="d25-A2-qh6" secondAttribute="leading" id="xdz-ye-yLL"/>
+                            <constraint firstItem="yLA-tp-7f8" firstAttribute="top" secondItem="d25-A2-qh6" secondAttribute="bottom" constant="8" symbolic="YES" id="yAe-vi-2W8"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WRq-7z-6oZ"/>
+                                <exclude reference="XbV-7r-e7N"/>
+                                <exclude reference="3yu-w3-1T6"/>
+                                <exclude reference="7ze-2D-dgK"/>
+                                <exclude reference="LZT-Nm-E7s"/>
+                                <exclude reference="O88-SN-ouc"/>
+                                <exclude reference="U4z-3E-GVY"/>
+                                <exclude reference="bjt-mx-u6c"/>
+                                <exclude reference="c4b-KT-fwO"/>
+                                <exclude reference="q7J-5w-cfL"/>
+                                <exclude reference="uCD-ZD-zAc"/>
+                                <exclude reference="xdz-ye-yLL"/>
+                                <exclude reference="yAe-vi-2W8"/>
+                                <exclude reference="c8J-wl-Jvy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Press &amp; hold to compare" id="cm7-JZ-O1Q">
                         <barButtonItem key="leftBarButtonItem" image="Location" id="zPa-6Z-s47">
@@ -59,13 +126,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapBoxView" destination="yGt-0R-e87" id="iBx-EU-Fgr"/>
-                        <outlet property="mapViewNative" destination="5YO-x9-1b1" id="vZL-Wh-Cmz"/>
+                        <outlet property="mapView" destination="yLA-tp-7f8" id="z6d-l8-hxJ"/>
+                        <outlet property="mapViewNative" destination="d25-A2-qh6" id="ZNM-WA-ncU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="-357"/>
+            <point key="canvasLocation" x="1203" y="-224"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OsT-ZA-xZ0">
@@ -75,6 +142,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9tq-MG-VXn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

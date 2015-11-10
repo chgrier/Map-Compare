@@ -6,9 +6,10 @@
 //  Copyright (c) 2015 Grier Mobile Development. All rights reserved.
 //
 
+// Annotation for future use in project
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-#import <MapboxGL/MGLAnnotation.h>
+#import "Mapbox.h"
 
 @interface MyAnnotation : NSObject <MGLAnnotation>
 

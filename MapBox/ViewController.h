@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapboxGL/MapboxGL.h>
+#import "Mapbox.h"
 #import <MapKit/MapKit.h>
 
 @interface ViewController : UIViewController

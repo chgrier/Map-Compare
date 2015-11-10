@@ -17,7 +17,7 @@
 		BE86842E1B1F5C3100A02592 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE86842D1B1F5C3100A02592 /* Settings.bundle */; };
 		BE8684311B1F5D8A00A02592 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8684301B1F5D8A00A02592 /* MyAnnotation.m */; };
 		BE9FE5721B1F89B800EA6C10 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9FE5711B1F89B800EA6C10 /* MapKit.framework */; };
-		FAFEF5747250E17B68666E27 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA7D98B4B5CBC9FE95E38C0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FAFEF5747250E17B68666E27 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA7D98B4B5CBC9FE95E38C0 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,7 +202,7 @@
 		BE8683FC1B1E6BAD00A02592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Grier Mobile Development";
 				TargetAttributes = {
 					BE8684031B1E6BAD00A02592 = {
@@ -378,6 +378,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -393,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -431,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,6 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MapBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesgrier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MapBox;
 			};
 			name = Debug;
@@ -457,6 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MapBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesgrier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MapBox;
 			};
 			name = Release;
@@ -475,6 +478,7 @@
 				);
 				INFOPLIST_FILE = MapBoxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesgrier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MapBoxTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapBox.app/MapBox";
 			};
@@ -490,6 +494,7 @@
 				);
 				INFOPLIST_FILE = MapBoxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesgrier.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MapBoxTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapBox.app/MapBox";
 			};
