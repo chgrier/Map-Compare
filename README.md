@@ -11,7 +11,7 @@ In Terminal, change the directory to your project’s root folder and then run t
 
 Also, you must enter your Mapbox Access Token from your Mapbox account page (see the warning directive in ViewController.m).  
 
-To learn more abou the app, see my post: http://charlesgrier.com/mapboxgl/
+To learn more about the app, see my post: http://charlesgrier.com/mapboxgl/
 
 ###### Screenshots:
 
